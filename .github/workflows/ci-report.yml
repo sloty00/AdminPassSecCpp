@@ -20,8 +20,10 @@ jobs:
 
       - name: compilar adminpassseccpp
         run: |
+          # Compilación en la raíz
           msbuild AdminPassSecCpp.sln /p:configuration=release
           
+          # Verificación en la raíz
           if (test-path "x64/release/AdminPassSecCpp.exe") {
             $exitcode = 0
           } else {
@@ -53,6 +55,7 @@ jobs:
             }
             detalles = "compilacion mediante msbuild exitosa."
           }
+          # Mantenemos el guion como requiere tu monitor central
           $jsonreport | convertto-json -depth 10 | out-file reporte-cicd.json -encoding utf8
 
       - name: desplegar reporte a github pages
