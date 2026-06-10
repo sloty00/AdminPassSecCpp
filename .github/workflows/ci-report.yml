@@ -20,10 +20,8 @@ jobs:
 
       - name: compilar adminpassseccpp
         run: |
-          # Ruta corregida incluyendo la subcarpeta
           msbuild ProyectoAdminCpp/ProyectoAdminCpp.sln /p:configuration=release
           
-          # Ajuste de ruta de verificacion
           if (test-path "ProyectoAdminCpp/x64/release/ProyectoAdminCpp.exe") {
             $exitcode = 0
           } else {
