@@ -20,9 +20,9 @@ jobs:
 
       - name: compilar adminpassseccpp
         run: |
-          msbuild ProyectoAdminCpp/ProyectoAdminCpp.sln /p:configuration=release
+          msbuild AdminPassSecCpp.sln /p:configuration=release
           
-          if (test-path "ProyectoAdminCpp/x64/release/ProyectoAdminCpp.exe") {
+          if (test-path "x64/release/AdminPassSecCpp.exe") {
             $exitcode = 0
           } else {
             $exitcode = 1
@@ -53,7 +53,7 @@ jobs:
             }
             detalles = "compilacion mediante msbuild exitosa."
           }
-          $jsonreport | convertto-json -depth 10 | out-file reportecicd.json -encoding utf8
+          $jsonreport | convertto-json -depth 10 | out-file reporte-cicd.json -encoding utf8
 
       - name: desplegar reporte a github pages
         if: always()
