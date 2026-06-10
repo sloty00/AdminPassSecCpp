@@ -40,7 +40,7 @@ jobs:
         run: |
           $results = get-content testresults.json | convertfrom-json
           $jsonreport = [pscustomobject]@{
-            proyecto = "adminpassseccpp"
+            proyecto = "AdminPassSecCPP"
             rama = "${{ github.ref_name }}"
             commit = "${{ github.sha }}"
             pipeline = @{
@@ -51,7 +51,7 @@ jobs:
               exitosos = $results.numpassedtests
               fallidos = $results.numfailedtests
               totales = $results.numtotaltests
-              coberturacodigo = "100%"
+              cobertura = "100%"
             }
             detalles = "compilacion mediante msbuild exitosa."
           }
