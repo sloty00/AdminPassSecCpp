@@ -1,16 +1,16 @@
 {
-  "proyecto": "adminpassseccpp",
+  "proyecto": "AdminPassSecCPP",
   "rama": "main",
-  "commit": "018a12b6eca7b31d4f31df25569019e47f721eec",
+  "commit": "8b799329e6705896b7c9ec97f965c0dc4833fd16",
   "pipeline": {
-    "estado": "success",
-    "fechaejecucion": "20265210A125227+0"
+    "fechaejecucion": "20265810A125833+0",
+    "estado": "success"
   },
   "tests": {
+    "cobertura": "100%",
     "exitosos": 1,
-    "totales": 1,
     "fallidos": 0,
-    "coberturacodigo": "100%"
+    "totales": 1
   },
   "detalles": "compilacion mediante msbuild exitosa."
 }
