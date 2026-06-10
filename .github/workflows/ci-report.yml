@@ -51,7 +51,7 @@ jobs:
               exitosos = $results.numpassedtests
               fallidos = $results.numfailedtests
               totales = $results.numtotaltests
-              cobertura = "100%"
+              cobertura_codigo = "100%"
             }
             detalles = "compilacion mediante msbuild exitosa."
           }
